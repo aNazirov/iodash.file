@@ -16,6 +16,7 @@ async function bootstrap() {
     'http://www.admin.iodash.anazirov.com',
     'http://www.iodash.anazirov.com',
     'http://iodash.anazirov.com',
+    'http://api.iodash.anazirov.com',
   ];
 
   if (MODE === 'DEV') {
