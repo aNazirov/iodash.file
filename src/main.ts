@@ -13,6 +13,7 @@ async function bootstrap() {
 
   const whitelist = [
     'http://159.223.157.138:3000',
+    'http://159.223.157.138:3030',
     'http://159.223.157.138:8000',
   ];
 
@@ -22,11 +23,10 @@ async function bootstrap() {
 
   app.enableCors({
     origin: function (origin, callback) {
-      console.log(origin);
-
       if (whitelist.indexOf(origin) !== -1) {
         callback(null, true);
       } else {
+        console.log(origin);
         callback(new Error('Not allowed by CORS'));
       }
     },
